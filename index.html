@@ -609,13 +609,17 @@
           </ul>
         </div>
         <div class="subscribe">
-          <h3 class="footer-title">Підпишіться на розсилку</h3>
           <form
             name="subscribe-form"
             class="form-subscribe"
             autocomplete="on"
             novalidate
           >
+            <label>
+              <span class="footer-title submit-title"
+                >Підпишіться на розсилку</span
+              >
+            </label>
             <div class="subscribe-wrap">
               <input
                 type="email"
@@ -624,8 +628,10 @@
                 placeholder="E-mail"
               />
               <button type="submit" class="btn btn-subscribe">
-                Підписатися
-                <svg></svg>
+                <span>Підписатися</span>
+                <svg width="24" height="24" class="icon-subscribe">
+                  <use href="./images/sprite.svg#icon-send"></use>
+                </svg>
               </button>
             </div>
           </form>
@@ -649,31 +655,31 @@
           >
             <label class="form-label">
               <span class="label-title">Ім'я</span>
-              <div class="form-wrap">
-                <input type="name" name="personal-info" class="form-input" />
-                <svg class="modal-icon" width="12" height="12">
-                  <use href="./images/sprite.svg#icon-name-form"></use>
-                </svg>
-              </div>
             </label>
+            <div class="form-wrap">
+              <input type="text" name="personal-info" class="form-input" />
+              <svg class="modal-icon" width="12" height="12">
+                <use href="./images/sprite.svg#icon-name-form"></use>
+              </svg>
+            </div>
             <label class="form-label">
               <span class="label-title">Телефон</span>
-              <div class="form-wrap">
-                <input type="tel" name="tel" class="form-input" />
-                <svg class="modal-icon" width="13" height="13">
-                  <use href="./images/sprite.svg#icon-tel-form"></use>
-                </svg>
-              </div>
             </label>
+            <div class="form-wrap">
+              <input type="tel" name="tel" class="form-input" />
+              <svg class="modal-icon" width="13" height="13">
+                <use href="./images/sprite.svg#icon-tel-form"></use>
+              </svg>
+            </div>
             <label class="form-label">
               <span class="label-title">Пошта</span>
-              <div class="form-wrap">
-                <input type="email" name="email" class="form-input" />
-                <svg class="modal-icon" width="15" height="12">
-                  <use href="./images/sprite.svg#icon-mail-form"></use>
-                </svg>
-              </div>
             </label>
+            <div class="form-wrap">
+              <input type="email" name="email" class="form-input" />
+              <svg class="modal-icon" width="15" height="12">
+                <use href="./images/sprite.svg#icon-mail-form"></use>
+              </svg>
+            </div>
             <label class="form-label">
               <span class="label-title">Коментар</span>
               <textarea
@@ -683,11 +689,27 @@
                 placeholder="Введіть текст"
               ></textarea>
             </label>
-            <div class="terms">
-              <input type="checkbox" class="checkbox" />
+
+            <label class="terms">
+              <input
+                type="checkbox"
+                class="checkbox visually-hidden"
+                name="terms-check"
+              />
+              <svg class="terms-icons" width="16" height="15">
+                <use
+                  class="icon-checked"
+                  href="./images/sprite.svg#icon-checked"
+                ></use>
+                <use
+                  class="icon-unchecked"
+                  href="./images/sprite.svg#icon-unchecked"
+                ></use>
+              </svg>
               <span class="terms-descr">Погоджуюся з розсилкою та приймаю</span>
               <a href="" target="_blank" class="terms-link">Умови договору</a>
-            </div>
+            </label>
+
             <button type="submit" class="btn form-btn">Відправити</button>
           </form>
         </div>
